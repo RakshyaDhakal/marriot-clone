@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+          }
+          body {
+            font-family: "Gowun Batang", serif;
+          }
+          .top {
+            background-color: #c1282f;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 100px;
+            align-items: center;
+          }
+          .search_bar {
+            width: 40%;
+            height: auto;
+            position: relative;
+          }
+          .search_bar input {
+            width: 100%;
+            padding: 10px 0px 10px 35px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+          }
+          .search_bar i {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #000;
+            font-size: 17px;
+          }
+          .top_right,
+          .top_right .contact,
+          .top_right .cart_login {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          .top_right {
+            gap: 30px;
+          }
+          .top_right .contact .phone {
+            border-right: 1px solid whitesmoke;
+            padding-right: 12px;
+            padding-bottom: 3px;
+          }
+          .top_right .contact p {
+            font-size: 15px;
+            margin-top: -5px;
+          }
+          .top_right .fa-mobile {
+            font-size: 25px;
+            margin-top: 10px;
+          }
+          .top_right span {
+            text-transform: uppercase;
+            font-size: 9px;
+          }
+          .cart_login p {
+            margin-left: 30px;
+          }
+          /* Top nav ends */
+          /* Navbar styling starts */
+          .nav_bar {
+            background-color: #fff;
+            width: 100%;
+            height: auto;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          }
+          .nav_bar .items ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            gap: 30px;
+          }
+          .nav_bar .items ul li {
+            list-style: none;
+          }
+          .nav_bar ul li a {
+            text-decoration: none;
+            color: #000;
+          }
+          .nav_bar .items .menu {
+            display: none;
+          }
+          .nav_bar .items ul li:hover .menu {
+            width: 180px;
+            display: block;
+            position: absolute;
+            font-size: 17px;
+            margin-top: 15px;
+            margin-left: -20px;
+            border-radius: 3px;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          }
+          .nav_bar .items ul li:hover .menu ul {
+            display: block;
+            margin-top: -10px;
+          }
+          .nav_bar .items ul li:hover .menu ul li {
+            margin: 10px;
+          }
+          /* Navbar styling ends */
+          /* Hero section styling starts */
+          .hero_section {
+            width: 100%;
+            height: 65vh;
+            text-align: center;
+          }
+          .overlay img {
+            height: 65vh;
+            width: 170vh;
+          }
+          
+          /* Hero section styling Ends */
+          /* Mid_ section styling starts*/
+          .mid_section .products {
+            height: 70px;
+            background-color: #f7f7f7;
+          }
+          .mid_section .banner .container {
+            height: 120px;
+            /* background-color: rgb(230, 138, 25); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+          }
+          
+          .container .steps1,
+          .container .steps2,
+          .container .steps3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+          }
+          
+          .container .message {
+            width: 250px;
+          }
+          
+          .container .message p span {
+            font-weight: bolder;
+          }
+          
+          .container .steps1 {
+            width: 190px;
+          }
+          .container .steps1 i {
+            font-size: 25px;
+            color: #c1282f;
+          }
+          .container .steps1 h1 {
+            color: lightgrey;
+          }
+          .container .steps1 p {
+            font-size: 13px;
+          }
+          .container .steps2 i {
+            font-size: 25px;
+            color: #c1282f;
+          }
+          .container .steps2 h1 {
+            color: lightgrey;
+          }
+          .container .steps2 p {
+            font-size: 13px;
+          }
+          .container .steps3 i {
+            font-size: 25px;
+            color: #c1282f;
+          }
+          .container .steps3 h1 {
+            color: lightgrey;
+          }
+          .container .steps3 p {
+            font-size: 13px;
+          }
+          
+          .container .steps3 {
+            width: 170px;
+          }
+          .mid_section .container .shopping_list {
+            height: 70px;
+            width: 300px;
+            border-radius: 3px;
+            background-color: #c1282f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            gap: 15px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          }
+          .mid_section .container .shopping_list .checkbox {
+            height: 15px;
+            width: 10px;
+            border: 1px solid white;
+          }
+          .mid_section .banner .poster {
+            display: flex;
+            justify-content: center;
+            padding-top: 0px;
+            padding-bottom: 15px;
+            gap: 10px;
+          }
+          .poster .box img {
+            width: 600px;
+            height: 250px;
+          }
+          /* Product section styling */
+          .mid_section .item_lists{
+            background-color: #f7f7f7;
+          }
+          .mid_section .item_lists .featured_product{
+              padding: 20px;
+          }
+          .mid_section .item_lists .featured_product .heading{
+            display: flex;
+            gap: 35px;
+            margin-left:140px;
+            align-items: center;
+            padding-bottom: 20px;
+          }
+          .mid_section .item_lists .featured_product .heading p{
+            text-transform: uppercase;
+            font-size:14px;
+            font-weight: bold;
+            color: grey;
+          }
+          .mid_section .item_lists .featured_product .heading a{
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight:bold;
+            font-size: 11px;
+            color: #c1282f;
+          }
+          .mid_section .featured_product .product_container{
+            width:90%;
+            margin:auto;
+            display: flex;
+            padding-left: 100px;
+          }
+          .mid_section .featured_product .product_card{
+            width:25%;
+            border: 1px solid lightgrey;
+            background-color: #fff;
+          }
+          .featured_product .product_card .image  img{
+            width:100%;
+          }
+          .product_card .content p{
+              font-size:13px;
+              padding: 10px 20px;
+          }
+          .product_card .price span{
+            font-weight: bold;
+          }
+          .product_card .price{
+            margin-left: 20px;
+          }
+          .product_card .quantity p {
+              font-size: 15px;
+              padding-top: 3px;
+          }
+          
+          .product_card .quantity {
+            display: flex;
+            gap: 10px;
+            margin-left: 20px;
+            margin-top: 30px;
+          }
+          
+          .product_card .quantity .btt{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             border:2px solid lightgray;
+             border-radius:20px;
+             width:70px;
+             gap: 5px;
+          
+          }
+          .product_card .quantity .btt .mid{
+            border-left:2px solid lightgray;
+            border-right:2px solid lightgray;
+            padding: 0px 5px;
+          }
+          .product_card .add{
+            background-color: #c1282f;
+            color:#fff;
+            border-radius:3px;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            margin-top: -10px;
+          }
+          .product_card .add p{
+           margin-top: 20px;
+           font-size: 13px;
+           font-weight: bold;
+           padding-top: 15px;
+          }
+          .product_card .add:hover{
+            color: #c1282f;
+            background-color:#fff;
+          }
+          /* Products list styling finish */
+          .mid_section .poster1{
+            padding: 10px;
+            text-align: center;
+            height: 260px;
+          }
+          .mid_section .poster1 img{
+            height: 250px;
+            width: 700px;
+          }
+          /* Feature catogories start */
+          .mid_section .featured_catagories{
+            background-color: #f7f7f7;
+            height: 1000px;
+          }
+          .featured_catagories .title{
+            text-transform: uppercase;
+            font-size:15px;
+            font-weight: bold;
+            color: grey;
+            margin-left:140px;
+            padding-top:50px;
+            margin-bottom:-20px;
+          }
+          .featured_catagories .catagory{
+            width: 90%;
+            margin: auto;
+            padding-left:130px;
+            padding-top:25px ;
+            display: flex;
+            margin-top: 10px;
+            gap:1px;
+          
+          }
+          .featured_catagories .content_card {
+            width: 200px;
+            height: 170px;
+            background-color: #fff;
+            text-align: center;
+            /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+           
+          }
+          .featured_catagories .content_card .image1 img{
+            width: 160px;
+            height:150px;
+          }
+          .featured_catagories .content_card p{
+            font-size: 13px;
+            font-weight:600;
+            color: #464545;
+            margin-top:20px;
+          }
+          .mid_section .poster3{
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+          }
+          /* MId section styling ends */
+          /* Footer  tyling starts */
+          .foot{
+            margin-top: 10px;
+          }
+          .foot .container{
+            padding: 80px;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            align-items:center;
+            flex-direction: row;
+            background-color: #f7f7f7;
+          }
+          .foot h3{
+            text-transform: uppercase;
+            font-size: 15px;
+            margin-bottom:20px;
+          }
+          .foot li{
+           list-style: none;
+           font-size: 17px;
+           margin-top: 10px;
+          }
+          .foot li a{
+            text-decoration: none;
+            color: #000;
+          }
+          
+          .foot .list h3{
+            margin-bottom: 20px;
+          }
+          .foot .terms h3{
+            margin-top:45px;
+          }
+          
+          .foot .pay img{
+            width: 70%;
+            margin-top: -70px;
+            margin-left: 40px;
+          }
+          
+          .foot .social_links h3{
+                margin-top: -40px;
+              
+          }
+          .foot .social_links{
+            text-align: center;
+            margin-left: -40px;
+          }
+          .foot .social_links i{
+               margin-left: 15px;
+               text-decoration: none;
+               color: #000;
+          }
+          
+          
+    </style>
+    <title>Hamro Shop</title>
+  </head>
+  <body>
+    <!-- Top bar starts -->
+    <nav class="top">
+      <div class="logo">
+        <h2>Hamro Shop</h2>
+        <span></span>
+      </div>
+      <div class="search_bar">
+        <form>
+          <input type="text" placeholder="Search products" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+      </div>
+      <div class="top_right">
+        <div class="contact">
+          <div class="icon"><i class="fa-solid fa-mobile"></i></div>
+          <div class="phone">
+            <span>Order at</span>
+            <p>01-1234567</p>
+          </div>
+        </div>
+        <div class="cart_login">
+          <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i><sup>0</sup>
+          </div>
+          <p>Login</p>
+        </div>
+      </div>
+    </nav>
+    <!-- Top bar Ends -->
+    <!-- Navbar starts -->
+    <nav class="nav_bar">
+      <div class="items">
+        <ul>
+          <li>
+            <a href="#">Grocery</a>
+            <div class="menu">
+              <ul>
+                <li><a href="#">Bread</a></li>
+                <li><a href="#">Milk</a></li>
+                <li><a href="#">Eggs</a></li>
+                <li><a href="#">Fruits</a></li>
+                <li><a href="#">Vegetables</a></li>
+                <li><a href="#">Cheese</a></li>
+                <li><a href="#">Yogurt</a></li>
+                <li><a href="#">Chicken</a></li>
+                <li><a href="#">Pasta</a></li>
+                <li><a href="#">Rice</a></li>
+                <li><a href="#">Cereal</a></li>
+                <li><a href="#">Coffee</a></li>
+                <li><a href="#">Tea</a></li>
+                <li><a href="#">Snack Bars</a></li>
+                <li><a href="#">Ice Cream</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Bakery & Dairy</a>
+            <div class="menu">
+              <ul>
+                <li><a href="#">Bread</a></li>
+                <li><a href="#">Croissants</a></li>
+                <li><a href="#">Bagels</a></li>
+                <li><a href="#">Muffins</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Cakes</a></li>
+                <li><a href="#">Pies</a></li>
+                <li><a href="#">Donuts</a></li>
+                <li><a href="#">Cheese</a></li>
+                <li><a href="#">Milk</a></li>
+                <li><a href="#">Butter</a></li>
+                <li><a href="#">Yogurt</a></li>
+                <li><a href="#">Ice Cream</a></li>
+                <li><a href="#">Cream Cheese</a></li>
+                <li><a href="#">Eggs</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Beverages</a>
+            <div class="menu">
+              <ul>
+                <li><a href="#">Coffee</a></li>
+                <li><a href="#">Tea</a></li>
+                <li><a href="#">Soda</a></li>
+                <li><a href="#">Juice</a></li>
+                <li><a href="#">Water</a></li>
+                <li><a href="#">Milk</a></li>
+                <li><a href="#">Hot Chocolate</a></li>
+                <li><a href="#">Smoothie</a></li>
+                <li><a href="#">Iced Tea</a></li>
+                <li><a href="#">Lemonade</a></li>
+                <li><a href="#">Energy Drink</a></li>
+                <li><a href="#">Mocktail</a></li>
+                <li><a href="#">Mocha</a></li>
+                <li><a href="#">Herbal Tea</a></li>
+                <li><a href="#">Fruit Punch</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Eggs & Meat</a>
+            <div class="menu">
+              <ul>
+                <li><a href="#">Eggs</a></li>
+                <li><a href="#">Chicken</a></li>
+                <li><a href="#">Beef</a></li>
+                <li><a href="#">Pork</a></li>
+                <li><a href="#">Lamb</a></li>
+                <li><a href="#">Fish</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">HouseHold Items</a>
+            <div class="menu">
+              <ul>
+                <li><a href="#">Refrigerator</a></li>
+                <li><a href="#">Microwave</a></li>
+                <li><a href="#">Washing Machine</a></li>
+                <li><a href="#">Television</a></li>
+                <li><a href="#">Vacuum Cleaner</a></li>
+                <li><a href="#">Coffee Maker</a></li>
+                <li><a href="#">Toaster</a></li>
+                <li><a href="#">Blender</a></li>
+                <li><a href="#">Iron</a></li>
+                <li><a href="#">Dishwasher</a></li>
+                <li><a href="#">Air Purifier</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Kitchen & Pet Food</a>
+            <div class="menu">
+              <ul>
+                <li><a href="#">Bread</a></li>
+                <li><a href="#">Milk</a></li>
+                <li><a href="#">Eggs</a></li>
+                <li><a href="#">Cheese</a></li>
+                <li><a href="#">Dry Dog Food</a></li>
+                <li><a href="#">Canned Cat Food</a></li>
+                <li><a href="#">Fish Flakes</a></li>
+                <li><a href="#">Bird Seeds</a></li>
+                <li><a href="#">Small Animal Pellets</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Packaged Foods</a>
+            <div class="menu">
+              <ul>
+                <li><a href="#">Cereal</a></li>
+                <li><a href="#">Pasta</a></li>
+                <li><a href="#">Canned Soup</a></li>
+                <li><a href="#">Snack Bars</a></li>
+                <li><a href="#">Frozen Pizza</a></li>
+                <li><a href="#">Chips</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Canned Vegetables</a></li>
+                <li><a href="#">Instant Noodles</a></li>
+                <li><a href="#">Granola</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Baby Store</a>
+            <div class="menu">
+              <ul>
+                <li><a href="#">Diapers</a></li>
+                <li><a href="#">Baby Formula</a></li>
+                <li><a href="#">Baby Wipes</a></li>
+                <li><a href="#">Baby Food</a></li>
+                <li><a href="#">Infant Clothes</a></li>
+                <li><a href="#">Pacifiers</a></li>
+                <li><a href="#">Baby Shampoo</a></li>
+                <li><a href="#">Nursery Bedding</a></li>
+                <li><a href="#">Baby Lotion</a></li>
+                <li><a href="#">Baby Toys</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Beauty Store</a>
+            <div class="menu">
+              <ul>
+                <li><a href="#">Shampoo</a></li>
+                <li><a href="#">Conditioner</a></li>
+                <li><a href="#">Facial Cleanser</a></li>
+                <li><a href="#">Body Lotion</a></li>
+                <li><a href="#">Makeup Remover</a></li>
+                <li><a href="#">Lip Balm</a></li>
+                <li><a href="#">Deodorant</a></li>
+                <li><a href="#">Hair Styling Gel</a></li>
+                <li><a href="#">Perfume</a></li>
+                <li><a href="#">Sunscreen</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Veg & Fruits</a>
+            <div class="menu">
+              <ul>
+                <li><a href="#">Apples</a></li>
+                <li><a href="#">Bananas</a></li>
+                <li><a href="#">Carrots</a></li>
+                <li><a href="#">Broccoli</a></li>
+                <li><a href="#">Oranges</a></li>
+                <li><a href="#">Spinach</a></li>
+                <li><a href="#">Tomatoes</a></li>
+                <li><a href="#">Strawberries</a></li>
+                <li><a href="#">Cucumbers</a></li>
+                <li><a href="#">Bell Peppers</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar Ends -->
+    <!-- Hero section Starts-->
+    <div class="hero_section">
+      <div class="overlay">
+        <img src="./Images/img 1.jpg" alt="image" />
+      </div>
+    </div>
+    <!-- Hero section Ends -->
+    <!-- Middle section Starts -->
+    <div class="mid_section">
+      <div class="products"></div>
+      <div class="banner">
+        <div class="container">
+          <div class="message">
+            <p>
+              Use <span>shopping lists</span> to manage and organize your needs
+            </p>
+          </div>
+          <div class="steps1">
+            <h1>1</h1>
+            <div class="icons"><i class="fa-solid fa-list-check"></i></div>
+            <p>Create your shopping list</p>
+          </div>
+          <div class="steps2">
+            <h1>2</h1>
+            <div class="icons"><i class="fa-brands fa-shopify"></i></div>
+            <p>Place your order</p>
+          </div>
+          <div class="steps3">
+            <h1>3</h1>
+            <div class="icons"><i class="fa-solid fa-truck-fast"></i></div>
+            <p>Get your Items delivered</p>
+          </div>
+          <div class="shopping_list">
+            <div class="checkbox"></div>
+            <div><h3>Create Shopping List</h3></div>
+          </div>
+        </div>
+        <div class="poster">
+          <div class="box">
+            <img src="./Images/img 2.jpg" alt="" />
+          </div>
+          <div class="box">
+            <img src="./Images/img 3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="item_lists">
+        <div class="featured_product">
+          <div class="heading">
+            <p>Featured Products</p>
+            <a href="#">View All</a>
+          </div>
+          <div class="product_container">
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/img 6.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/img4.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1750</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/img 5.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1475</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/img 6.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1000</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/img4.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1450</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- second  -->
+        <div class="featured_product">
+          <div class="heading">
+            <p>Chocolates</p>
+            <a href="#">View All</a>
+          </div>
+          <div class="product_container">
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/1.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  Nestle Milkybar Moosha Caramel + Nougat Bar (38gm)
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.50</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/2.png" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  Nestle Smarties Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.120</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/3.png" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  Nestle Smarties Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.125</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/1.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  Nestle Smarties Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/5.png" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  Nestle Smarties Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.150</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- third -->
+        <div class="featured_product">
+          <div class="heading">
+            <p>DDC</p>
+            <a href="#">View All</a>
+          </div>
+          <div class="product_container">
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/7.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                </p>
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/9.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/11.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/14.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                   DDC paneer Smooth & Creamy Chocolate, 180g
+                   DDC paneer Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/img 6.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="featured_product">
+          <div class="heading">
+            <p>Everyday Essentials</p>
+            <a href="#">View All</a>
+          </div>
+          <div class="product_container">
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/20.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/21.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/24.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/22.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/19.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="featured_product">
+          <div class="heading">
+            <p>DDC</p>
+            <a href="#">View All</a>
+          </div>
+          <div class="product_container">
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/7.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                </p>
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/9.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/11.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                  DDC paneer Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/14.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                   DDC paneer Smooth & Creamy Chocolate, 180g
+                   DDC paneer Smooth & Creamy Chocolate, 180g
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/img 6.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="featured_product">
+          <div class="heading">
+            <p>Buy ONE Get ONE free !!</p>
+            <a href="#">View All</a>
+          </div>
+          <div class="product_container">
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/img 6.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1250</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/img4.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1750</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/img 5.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1475</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/img 6.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1000</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="image">
+                <img src="./Images/img4.jpg" alt="image" />
+              </div>
+              <div class="content">
+                <p>
+                  BUY ONE Diana of London Super Matte Lipstick -16 | GET ONE
+                  Diana of London Super Matte Lipstick-04 FREE!!
+                </p>
+              </div>
+              <div class="price">
+                <p>NRs<span>.1450</span></p>
+              </div>
+              <div class="quantity">
+                <div><p>Qty</p></div>
+                <div class="btt">
+                  <div>-</div>
+                  <div class="mid">1</div>
+                  <div>+</div>
+                </div>
+              </div>
+              <div class="add">
+                <p>Add To Shopping List</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="poster1">
+        <img src="./Images/img 7.jpg" alt="image" />
+      </div>
+      <div class="featured_catagories">
+        <div class="title">
+          <p>Featured Catagories</p>
+        </div>
+        <div class="catagory">
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/shampoo.jpg" alt="img" />
+            </div>
+            <p>Hair Color & Dyes</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/a.jpg" alt="img" />
+            </div>
+            <p>Body Care</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/b.jpg" alt="img" />
+            </div>
+            <p>Deodrant & Fragrance</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/c.jpg" alt="img" />
+            </div>
+            <p>Cooking Oil & Ghee</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/d.jpg" alt="img" />
+            </div>
+            <p>Baby Food & formula</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/e.jpg" alt="img" />
+            </div>
+            <p>Skin Care</p>
+          </div>
+        </div>
+        <div class="catagory">
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/f.jpg" alt="img" />
+            </div>
+            <p>Shampoo & Conditioner</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/g.jpg" alt="img" />
+            </div>
+            <p>Noodles & Pasta</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/h.jpg" alt="img" />
+            </div>
+            <p>Sanitary Pads & Tampons/p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/i.jpg" alt="img" />
+            </div>
+            <p>Baby Food</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/j.jpg" alt="img" />
+            </div>
+            <p>Rice & Rice Products</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/k.jpg" alt="img" />
+            </div>
+            <p>Hair Oil & Serum</p>
+          </div>
+        </div>
+        <div class="catagory">
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/l.jpg" alt="img" />
+            </div>
+            <p>Mouthwash/p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/m.jpg" alt="img" />
+            </div>
+            <p>Lip Care</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/n.jpg" alt="img" />
+            </div>
+            <p>Insect & Mosquito Repellents</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/o.jpg" alt="img" />
+            </div>
+            <p>Womens Deo</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/p.jpg" alt="img" />
+            </div>
+            <p>Shaving Foams</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/q.jpg" alt="img" />
+            </div>
+            <p>Dairy</p>
+          </div>
+        </div>
+        <div class="catagory">
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/r.jpg" alt="img" />
+            </div>
+            <p>Frozen Meat</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/s.jpg" alt="img" />
+            </div>
+            <p>Baby Laundry</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/t.jpg" alt="img" />
+            </div>
+            <p>Baby Formula</p>
+          </div>
+          <div class="content_card">
+            <div class="image1">
+              <img src="./Images/z.jpg" alt="img" />
+            </div>
+            <p>Baby Diapers & Wipes</p>
+          </div>
+        </div>
+      </div>
+      <div class="poster3">
+        <img src="./Images/vendor_form.4ff0a067.jpeg" alt="vendor" />
+      </div>
+    </div>
+    <!-- Middle section Ends -->
+  </body>
+  <footer class="foot">
+    <div class="container">
+    <div class="one">
+      <h1>Hamro Pasal</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">How To Order</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+    <div class="list">
+      <h3>Lists</h3>
+      <li><a href="#">Create My List</a></li>
+      <li><a href="#">How to use List?</a></li>
+      <li><a href="#">Recommend</a></li>
+    </div>
+    <div class="app">
+      <h3>Download App</h3>
+      <div class="google_play"> <img src="./Images/google play.png" alt="paymennt" /></div>
+      <div class="google_play"> <img src="./Images/google play.png" alt="paymennt" /></div>
+    </div> 
+    <div class="terms">
+      <h3>Terms & Policies</h3>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Shipping Policy</a></li>
+      <li><a href="#">Return Policy</a></li>
+      <li><a href="#">Privacy Statement</a></li>
+    </div>
+    <div class="pay">
+      <img src="./Images/pay.png" alt="paymennt" />
+    </div> 
+    <div class="social_links">
+      <h3>Stay in Touch</h3>
+      <a href="https://www.facebook.com"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+
+      <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.instagram.com"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+      <a href="https://www.linkedin.com"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+    </div>
+  </div>
+  </footer>
+</html>
